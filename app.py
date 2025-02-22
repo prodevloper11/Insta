@@ -29,7 +29,9 @@ def get_instagram_data(instagram_url):
         print("Error:", str(e))
         return None
 
-@app.route('/api/download', methods=['GET'])
+@app.route('/')
+def d():
+     return "api running"
 def download():
     instagram_url = request.args.get('url')
     if not instagram_url:
